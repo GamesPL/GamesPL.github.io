@@ -1,0 +1,39 @@
+# Последняя версия установщика, имеющаяся в репозитории
+2.0
+
+# Домен проекта
+http://gsmanager.ru
+
+# Основной репозиторий (перенесно на GitHub и более не используется)
+http://mirror.gsmanager.ru
+
+# Репозиторий с играми
+http://gs.gsmanager.ru
+
+# Версия PHP по умолчанию
+5.6
+
+# Версия PHPMyAdmin (phpMyAdmin-5.1.1-all-languages)
+phpMyAdmin-4.9.4-all-languages
+
+# Ссылка на PHPMyAdmin
+http://mirror.enginegp.ru/files/phpmyadmin/phpMyAdmin-4.9.4-all-languages.tar.gz
+
+# GitHub данные
+# Логин для доступа к репозиторию EngineGP
+MaXa0H
+
+# Токен для доступа к приватному репозиторию EngineGP
+No
+
+# Ссылка для клонирования репозитория (https://$GITUSER:$GITTOKEN@github.com/$GITUSER/GamePL.git)
+https://github.com/MaXa0H/GamePL.git
+
+# Ссылка для клонирования репозитория с надстройками (https://$GITUSER:$GITTOKEN@github.com/$GITUSER/GamePL-requirements.git)
+https://github.com/MaXa0H/GamePL-requirements.git
+
+# Ветки разработок
+Standard, Lite, FAT, Classic
+
+# Последняя версия GamePL, имеющаяся в репозиториях
+1.0
