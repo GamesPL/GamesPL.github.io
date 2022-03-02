@@ -1179,6 +1179,7 @@ setPMA() {
         echo 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2' | debconf-set-selections > /dev/null 2>&1
         apt -y --force-yes --allow-unauthenticated --allow-downgrades --allow-remove-essential --allow-change-held-packages install phpmyadmin > /dev/null 2>&1
     else
+		cd ~
         wget $PMALINK > /dev/null 2>&1
         tar xvf $PMAVER.tar.gz > /dev/null 2>&1
         rm $PMAVER.tar.gz > /dev/null 2>&1
