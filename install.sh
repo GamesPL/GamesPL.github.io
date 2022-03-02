@@ -37,7 +37,7 @@ elif [ $DISTNAME == "CentOS" ]; then
 	yum -y install wget
 fi
 
-DOMAIN="https://enginegp.ru" # Основной домен для работы
+DOMAIN="https://gamespl.ru" # Основной домен для работы
 SHVER="2.1" # Версия установщика
 
 echo "Getting data from the server..."
