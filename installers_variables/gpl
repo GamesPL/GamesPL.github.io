@@ -2,13 +2,13 @@
 2.0
 
 # Домен проекта
-http://gsmanager.ru
+http://gamespl.ru
 
 # Основной репозиторий (перенесно на GitHub и более не используется)
-http://mirror.gsmanager.ru
+http://mirror.gamespl.ru
 
 # Репозиторий с играми
-http://gs.gsmanager.ru
+http://gs.gamespl.ru
 
 # Версия PHP по умолчанию
 5.6
@@ -30,7 +30,7 @@ No
 https://github.com/MaXa0H/GamePL.git
 
 # Ссылка для клонирования репозитория с надстройками (https://$GITUSER:$GITTOKEN@github.com/$GITUSER/GamePL-requirements.git)
-https://github.com/MaXa0H/GamePL-requirements.git
+https://github.com/MaXa0H/EngineGP-requirements.git
 
 # Ветки разработок
 Standard, Lite, FAT, Classic
