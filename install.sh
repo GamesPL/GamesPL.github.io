@@ -38,7 +38,7 @@ elif [ $DISTNAME == "CentOS" ]; then
 fi
 
 DOMAIN="https://gamespl.ru" # Основной домен для работы
-SHVER="2.1" # Версия установщика
+SHVER="2.2" # Версия установщика
 
 echo "Getting data from the server..."
 
@@ -1108,10 +1108,19 @@ installMYSQL() {
 addPHP() {
 	if [ $DISTNAME == "Debian" ]; then
 		wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg > /dev/null 2>&1
-		sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list' > /dev/null 2>&1
+		#sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list' > /dev/null 2>&1 # щортовы иные странцы habr.com/ru/news/826262
+
+        # Обходной вариант через собственный репозиторий
+        apt -y --force-yes --allow-unauthenticated --allow-downgrades --allow-remove-essential --allow-change-held-packages install lsb-release ca-certificates curl > /dev/null 2>&1
+        curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://mirror.enginegp.com/sury/debsuryorg-archive-keyring.deb > /dev/null 2>&1
+        dpkg -i /tmp/debsuryorg-archive-keyring.deb > /dev/null 2>&1
+        sh -c 'echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://mirror.enginegp.com/sury/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list' > /dev/null 2>&1
+        apt -y --force-yes --allow-unauthenticated --allow-downgrades --allow-remove-essential --allow-change-held-packages update > /dev/null 2>&1
+
 	elif [ $DISTNAME == "Ubuntu" ]; then
         apt -y --force-yes --allow-unauthenticated --allow-downgrades --allow-remove-essential --allow-change-held-packages install software-properties-common > /dev/null 2>&1
-		add-apt-repository -y ppa:ondrej/php > /dev/null 2>&1
+		#add-apt-repository -y ppa:ondrej/php > /dev/null 2>&1 # щортовы иные странцы habr.com/ru/news/826262
+        LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php -y > /dev/null 2>&1
 	fi
 }
 # Установка PHP
